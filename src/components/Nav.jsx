@@ -1,9 +1,6 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
-  const navigate = useNavigate();
-  const authed = Boolean(getToken());
-
   return (
     <header className="nav">
       <div className="nav__inner">
@@ -13,24 +10,6 @@ export default function Nav() {
           <Link to="/about">About</Link>
           <Link to="/projects">Projects</Link>
           <Link to="/contact">Reach Out</Link>
-
-          {authed ? (
-            <>
-              <Link to="/dashboard">Dashboard</Link>
-              <button
-                className="btn btn--ghost"
-                onClick={() => {
-                  clearToken();
-                  navigate("/");
-                }}
-              >
-                Log out
-              </button>
-            </>
-          ) : (
-            <>
-            </>
-          )}
         </nav>
       </div>
     </header>
