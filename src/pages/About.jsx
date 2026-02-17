@@ -7,8 +7,8 @@ export default function About() {
         <h2>Background</h2>
         <p>
           I’m a Computer Science student at <b>University of California, Santa Barbara</b>.
-          I grew up in <b>Irvine, CA</b> and attended <b>OCSA</b> for <b>Ballroom Dance</b> and
-          <b> Creative Writing</b>.
+          I grew up in <b>Irvine, CA</b>, and I have a background in Ballroom Dance and Creative Writing from <b>Orange County School of the Arts</b>. 
+          I’m passionate about building projects at the intersection of software, data, and creative tech.
         </p>
       </section>
 

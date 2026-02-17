@@ -6,16 +6,23 @@ export default function Contact() {
   const [status, setStatus] = useState({ type: "idle", msg: "" });
 
   async function onSubmit(e) {
-    e.preventDefault();
-    setStatus({ type: "loading", msg: "Sending..." });
-    try {
-      await apiFetch("/contact", { method: "POST", body: form });
-      setStatus({ type: "ok", msg: "Sent! I’ll get back to you soon." });
-      setForm({ name: "", email: "", message: "" });
-    } catch (err) {
-      setStatus({ type: "err", msg: err.message });
-    }
+  e.preventDefault();
+  setStatus({ type: "loading", msg: "Sending..." });
+
+  try {
+    await apiFetch("/api/contact", {   // ✅ new path
+      method: "POST",
+      body: form,
+    });
+
+    setStatus({ type: "ok", msg: "Sent! I’ll get back to you soon." });
+    setForm({ name: "", email: "", message: "" });
+
+  } catch (err) {
+    setStatus({ type: "err", msg: err.message });
   }
+}
+
 
   return (
     <main className="container">

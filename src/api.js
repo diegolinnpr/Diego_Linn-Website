@@ -1,19 +1,17 @@
-const API_BASE = "http://localhost:8000";
-
-export async function apiFetch(path, { method = "GET", body, token } = {}) {
-  const headers = { "Content-Type": "application/json" };
-  if (token) headers.Authorization = `Bearer ${token}`;
-
-  const res = await fetch(`${API_BASE}${path}`, {
+export async function apiFetch(path, { method = "GET", body } = {}) {
+  const res = await fetch(path, {
     method,
-    headers,
-    body: body ? JSON.stringify(body) : undefined
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: body ? JSON.stringify(body) : undefined,
   });
 
   const data = await res.json().catch(() => ({}));
+
   if (!res.ok) {
-    const msg = data?.detail || "Request failed";
-    throw new Error(msg);
+    throw new Error(data?.error || "Request failed");
   }
+
   return data;
 }

@@ -36,7 +36,7 @@ export default function App() {
       <footer className="footer">
         <div className="container footer__inner">
           <span>© {new Date().getFullYear()} Diego Linn</span>
-          <span className="muted">Built with React + FastAPI</span>
+          <span className="muted">Built with React + Vite</span>
         </div>
       </footer>
     </>
