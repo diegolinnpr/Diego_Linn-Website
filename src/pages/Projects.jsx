@@ -25,7 +25,7 @@ export default function Projects() {
           An interactive site that displays a fractals model users can play with, plus
           explanations of fractals and how they’re used in <b>computer graphics</b> and
           <b> modeling real-world natural patterns</b>. The site is built with React and displays
-          the fractal models using WebGL. My contributions include the </b> website design, React components, 
+          the fractal models using WebGL. My contributions include the website design, React components, 
           and implementation of model visualization interaction. I also designed framework and the workflow 
           which includes professional level linting. This project is a work in progress, and I’m excited to keep improving it!
         </p>
