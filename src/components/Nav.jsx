@@ -1,5 +1,4 @@
 import { Link, useNavigate } from "react-router-dom";
-import { getToken, clearToken } from "../authStore";
 
 export default function Nav() {
   const navigate = useNavigate();
