@@ -8,21 +8,23 @@ import Contact from "./pages/Contact.jsx";
 
 export default function App() {
   return (
-    <>
+    <div className="app">
       <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
 
       <footer className="footer">
         <div className="container footer__inner">
           <span>© {new Date().getFullYear()} Diego Linn</span>
-          <span className="muted">Built with React + Vite</span>
         </div>
       </footer>
-    </>
+    </div>
   );
 }
